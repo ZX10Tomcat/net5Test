@@ -1,0 +1,50 @@
+﻿<Window x:Class="net5Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:net5Test"
+        mc:Ignorable="d"
+        Title="Records demo" Height="662" Width="1131">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="157*"/>
+            <RowDefinition Height="485*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="614*"/>
+            <ColumnDefinition Width="465*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Record" HorizontalAlignment="Left" Height="506" Margin="22,82,0,0" VerticalAlignment="Top" Width="529" Grid.RowSpan="2">
+            <TextBox x:Name="RecordTextBox" HorizontalAlignment="Left" Height="464" Margin="206,0,0,0" Text="TextBox" TextWrapping="Wrap" Width="303" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0.553"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-1.49"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+        </GroupBox>
+        <GroupBox Header="Class" HorizontalAlignment="Left" Height="506" Margin="576,82,0,0" VerticalAlignment="Top" Width="528" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <TextBox x:Name="ClassTextBox" HorizontalAlignment="Left" Height="468" Margin="199,0,0,0" Text="TextBox" TextWrapping="Wrap" Width="303"/>
+        </GroupBox>
+        <Button Content="bill1c.ToString()" HorizontalAlignment="Left" Height="30" Margin="599,109,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click_1" Grid.ColumnSpan="2"/>
+        <Button Content="bill1r.ToString()" HorizontalAlignment="Left" Height="30" Margin="36,109,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click"/>
+        <Button x:Name="equalsRecords" Content="Equals (bill1r, bill2b)" HorizontalAlignment="Left" Height="30" Margin="36,1,0,0" VerticalAlignment="Top" Width="173" Click="equalsRecords_Click" Grid.Row="1"/>
+        <Button x:Name="equalsClasses" Content="Equals(bill1c, bill2c)" HorizontalAlignment="Left" Height="30" Margin="598,157,0,0" VerticalAlignment="Top" Width="173" Click="equalsClasses_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="ReferenceClass" Content="ReferenceEquals(bill1c, bill2c)" HorizontalAlignment="Left" Height="30" Margin="598,45,0,0" VerticalAlignment="Top" Width="174" Grid.ColumnSpan="2" Grid.Row="1" Click="ReferenceClass_Click"/>
+        <Button x:Name="ReferenceRecord" Content="ReferenceEquals(bill1r, bill2r)" HorizontalAlignment="Left" Height="30" Margin="36,45,0,0" VerticalAlignment="Top" Width="173" Grid.Row="1" Click="ReferenceRecord_Click"/>
+        <Label Content="BillRecord bill1r = new(Id: &quot;1&quot;, Type: &quot;XVA&quot;, Amount: 10);&#xA;BillRecord bill2r = new(Id: &quot;1&quot;, Type: &quot;XVA&quot;, Amount: 10);" HorizontalAlignment="Left" Height="67" Margin="23,23,0,0" VerticalAlignment="Top" Width="504"/>
+        <Label Content="BillClass bill1c = new(&quot;1&quot;, &quot;XVA&quot;, 10);&#xA;BillClass bill2c = new(&quot;1&quot;, &quot;XVA&quot;, 10);" HorizontalAlignment="Left" Height="67" Margin="588,23,0,0" VerticalAlignment="Top" Width="504" Grid.ColumnSpan="2"/>
+        <Button x:Name="Record_eq" Content="bill1r == bill2r" HorizontalAlignment="Left" Height="30" Margin="36,90,0,0" VerticalAlignment="Top" Width="173" Grid.Row="1" Click="Record_eq_Click"/>
+        <Button x:Name="Bill_eq" Content="bill1c == bill2c" HorizontalAlignment="Left" Height="30" Margin="597,90,0,0" VerticalAlignment="Top" Width="174" Grid.ColumnSpan="2" Grid.Row="1" Click="Bill_eq_Click"/>
+        <Button x:Name="Record_getHashCode" Content="GetHashCode() bill1r bill2r" HorizontalAlignment="Left" Height="30" Margin="36,134,0,0" VerticalAlignment="Top" Width="173" Grid.Row="1" Click="Record_getHashCode_Click"/>
+        <Button x:Name="Class_getHashCode" Content="GetHashCode() bill1c bill2c" HorizontalAlignment="Left" Height="30" Margin="598,134,0,0" VerticalAlignment="Top" Width="174" Grid.ColumnSpan="2" Grid.Row="1" Click="Class_getHashCode_Click"/>
+        <Button x:Name="Record_deconstruct" Content="Deconstructor bill1r" HorizontalAlignment="Left" Height="30" Margin="36,179,0,0" VerticalAlignment="Top" Width="173" Grid.Row="1" Click="Record_deconstruct_Click"/>
+        <Button x:Name="Record_newValue" Content="New Amount of bill1r" HorizontalAlignment="Left" Height="30" Margin="36,0,0,0" VerticalAlignment="Center" Width="173" Grid.Row="1" Click="Record_newValue_Click"/>
+        <Button x:Name="Record_newValue_Copy" Content="Conclusion" HorizontalAlignment="Left" Height="30" Margin="471,436,0,0" VerticalAlignment="Top" Width="173" Grid.Row="1" Click="Open_NewWindow_Click" Grid.ColumnSpan="2" />
+
+    </Grid>
+</Window>

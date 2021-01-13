@@ -1,0 +1,18 @@
+﻿<Window x:Class="net5Test.Conclusion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:net5Test"
+        mc:Ignorable="d"
+        Title="Conclusion" Height="682" Width="1036" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,42,47">
+        <Button Content="Benefits" HorizontalAlignment="Left" Height="37" Margin="26,50,0,0" VerticalAlignment="Top" Width="166" FontSize="16" Click="Button_Click"/>
+        <Label x:Name="Benefits" Content="- Simple setup&#xD;&#xA;- Thread-safe&#xD;&#xA;- Easy to share the object between methods&#xD;&#xA;" HorizontalAlignment="Left" Height="82" Margin="383,51,0,0" VerticalAlignment="Top" Width="547" FontSize="18" FontWeight="Bold" Visibility="Hidden"/>
+        <Button Content="When to use" HorizontalAlignment="Left" Height="37" Margin="26,249,0,0" VerticalAlignment="Top" Width="166" FontSize="16" Click="Button_Click_1"/>
+        <Label x:Name="Use" Content="- Loading API/feed that doesn't change&#xA;- API calls&#xA;- Immutable Data (Class contain  record(s))" HorizontalAlignment="Left" Height="82" Margin="383,249,0,0" VerticalAlignment="Top" Width="547" FontSize="18" FontWeight="Bold" Grid.IsSharedSizeScope="True" Visibility="Hidden"/>
+        <Button Content="When not to use" HorizontalAlignment="Left" Height="37" Margin="26,476,0,0" VerticalAlignment="Top" Width="166" FontSize="16" Click="Button_Click_2"/>
+        <Label x:Name="NotUse" Content="- Data, that needs to be changed (EF)&#xA;" HorizontalAlignment="Left" Height="82" Margin="383,476,0,0" VerticalAlignment="Top" Width="547" FontSize="18" FontWeight="Bold" Grid.IsSharedSizeScope="True" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
